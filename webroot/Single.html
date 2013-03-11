@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<script type="text/javascript" src="html5 A2.js">
+			function formSubmit(){
+				var formResult = document.getElementById("singlePlayerForm").submit();
+			}
+		</script>
+	</head>
+	<body>
+		<div id="singlePlayerWelcome">
+		<form id="singlePlayerForm" action="form_action.asp">
+			<h1>Welcome to Single Player v. Artificial Intelligence(AI)</h1>
+			<br/>
+			<br/>
+			<h2>Username:  </h2><input type="text" name="Username"><br/>
+			<input type="button" onclick="formSubmit" value="Submit">
+		</form>
+		</div>
+	</body>
+</html>
