@@ -41,8 +41,9 @@ $(document).ready(function(){
             processData: false,
             success: function(msg) {
 					console.log(msg);
-					var test = msg.getElementsByTagName("gameID");
-					localStorage.setItem('test',test);
+					test = msg.getElementsByTagName("gameID");
+				//	var test2 = test.childNodes;
+					document.write(test[0].innerHTML);
 				//var gameID = msg/response/gameID;
 				//alert(gameID);
 				//SAVE TO LOCAL STORAGE
