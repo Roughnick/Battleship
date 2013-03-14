@@ -1,36 +1,19 @@
 // URL to send request to.
-var url = "http://dickerson.neumont.edu:8080/Battleship/GameRequest/NewGame";
+var url = "http://dickerson.neumont.edu:8080/Battleship/GameRequest/";
+var username;
 
-// Gets an XML response from a GET request.
-function sendGETRequest()
-{
-	// Send GET request. We expect XML in response.
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("GET", url, false);
-	//beforeSend() runs
-	xmlhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-	xmlhttp.setRequestHeader("Pragma", "Cache-Control: no-cache");
-	xmlhttp.send();
-	
-	// Convert XML into a string.
-	//Success(xmlhttp.responseXML) runs now
-	var xmlString = new XMLSerializer().serializeToString(xmlhttp.responseXML);
-	xmlString = xmlString.replace(/</g, "&lt;");
-	xmlString = xmlString.replace(/>/g, "&gt;");
-	
-	// Put XML string into the "result" item.
-	document.getElementById("result").innerHTML = xmlString;
-	
-	console.log(xmlString);
-	
-	// Format the XML string using google-code-prettify.
-	// (https://code.google.com/p/google-code-prettify/)
-
-}
-
-//var localStorage.setItem(gameID,moves);
-
+function usernameSave(name)
+	{
+		username = name;
+	}
 $(document).ready(function(){
+	
+	
+	
+	function callUsername()
+	{
+		return username;
+	}
 	
 	function sendGameRequest(data)
 	{
@@ -38,6 +21,8 @@ $(document).ready(function(){
 		
 		return request;
 	}
+	$('#single').click(function(){
+	})
 	$('#test2').click(function() {
 		$('#games').append('<tr><td>12233454</td><td>Barry</td><td>waiting</td></tr>');
 	});
