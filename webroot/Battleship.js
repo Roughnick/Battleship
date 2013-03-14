@@ -1,14 +1,16 @@
 // URL to send request to.
 var url = "http://dickerson.neumont.edu:8080/Battleship/GameRequest/";
-var username;
+var username="RoughNick";
 
 function usernameSave(name)
 {
 	username = name;
+	localStorage.setItem('username',username);
 }
 	
 function callUsername()
 {
+	username = localStorage['username'];
 	return username;
 }
 $(document).ready(function(){
