@@ -3,17 +3,19 @@ var url = "http://dickerson.neumont.edu:8080/Battleship/GameRequest/";
 var username;
 
 function usernameSave(name)
-	{
-		username = name;
-	}
+{
+	username = name;
+}
+	
+function callUsername()
+{
+	return username;
+}
 $(document).ready(function(){
 	
 	
 	
-	function callUsername()
-	{
-		return username;
-	}
+	
 	
 	function sendGameRequest(data)
 	{
