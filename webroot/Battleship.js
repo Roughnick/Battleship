@@ -25,6 +25,7 @@ $(document).ready(function(){
 		
 		return request;
 	}
+	//this will go off when the single player button is pressed
 	$('#single').click(function(){
 	})
 	$('#test2').click(function() {
