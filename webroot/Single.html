@@ -15,9 +15,30 @@
 				$('#welcomeUser').append(callUsername());
 			});
 		</script>
+		<style>
+		<!--This is the background Color -->
+			body{
+				background-color: #C0C0C0;
+				margin-left: auto;
+				margin-right: auto;
+				width: 70%;
+			}
+			<!--#SinglePlayerWelcome{
+				<!--background-color: #CCC;
+				margin-left: auto;
+				margin-right: auto;
+				width: 70%;
+			}
+			#SinglePlayerDificulty{
+				<!--//background-color: #CCC;
+				margin-left: auto;
+				margin-right: auto;
+				width: 70%;
+			}-->
+		</style>
 	</head>
 	<body>
-		<div id="singlePlayerWelcome">
+		<div id="SinglePlayerWelcome">
 			<h1>Welcome to Single Player v. Artificial Intelligence Battleship (AIB)</h1>
 			<h3 id= "welcomeUser">Welcome </h3>
 			<!--<br/>-->
@@ -25,9 +46,9 @@
 		<div id="SinglePlayerDificulty" action="form_action.asp">
 			<h2>Select your difficulty level</h2>
 			<br/>
-			<input type="button" onclick="alert('You Selected Edison')" value="Edison">
-			<input type="button" onclick="alert('You Selected Geeves')" value="Geeves">
-			<input type="button" onclick="alert('You Selected Robby')" value="Robby">
+			<input type="button" onclick="alert('You Selected Edison')" id="EdisonLevel" name="Edison" value="Hard">
+			<input type="button" onclick="alert('You Selected Geeves')" id="GeevesLevel" name="Geeves" value="Medium">
+			<input type="button" onclick="alert('You Selected Robby')" id="RobbyLevel" name="Robby" value="Easy">
 		</div>
 	</body>
 </html>
