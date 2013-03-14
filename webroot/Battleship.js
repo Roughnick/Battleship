@@ -27,7 +27,7 @@ $(document).ready(function(){
 	$('#test2').click(function() {
 		$('#games').append('<tr><td>12233454</td><td>Barry</td><td>waiting</td></tr>');
 	});
-	
+	//This will go off when the button in BattleshipGame.HTML is clicked
 	$('#test').click(function(){
 		$.ajax({
 			type : "POST",
