@@ -35,16 +35,18 @@ $(document).ready(function(){
             {
                 request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
             },
-            url: url,
+            url: url+"NewGame",
 			dataType: "XML",
             data: sendGameRequest('<playerID>jake</playerID>'),
             processData: false,
             success: function(msg) {
-					
-				var gameID = msg/response/gameID;
-				alert(gameID);
+					console.log(msg);
+					var test = msg.getElementsByTagName("gameID");
+					localStorage.setItem('test',test);
+				//var gameID = msg/response/gameID;
+				//alert(gameID);
 				//SAVE TO LOCAL STORAGE
-				localStorage.setItem('gameID','moves');
+				//localStorage.setItem('gameID','moves');
 				
 				//RETRIEVE MOVES FOR GAME IN LOCAL STORAGE
 				//var moves = localStorage[gameID];
