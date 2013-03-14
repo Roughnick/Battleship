@@ -1,6 +1,6 @@
 // URL to send request to.
 var url = "http://dickerson.neumont.edu:8080/Battleship/GameRequest/";
-var username="RoughNick";
+var username="Player";
 
 function usernameSave(name)
 {
@@ -14,10 +14,6 @@ function callUsername()
 	return username;
 }
 $(document).ready(function(){
-	
-	
-	
-	
 	
 	function sendGameRequest(data)
 	{
@@ -41,21 +37,23 @@ $(document).ready(function(){
             },
             url: url,
 			dataType: "XML",
-            data: sendGameRequest('<playerID>jking</playerID>'),
+            data: sendGameRequest('<playerID>jake</playerID>'),
             processData: false,
             success: function(msg) {
 					
+				var gameID = msg/response/gameID;
+				alert(gameID);
 				//SAVE TO LOCAL STORAGE
-				localStorage.setItem('barry','nix');
+				localStorage.setItem('gameID','moves');
 				
 				//RETRIEVE MOVES FOR GAME IN LOCAL STORAGE
-				var moves = localStorage[gameID];
+				//var moves = localStorage[gameID];
 				
 				//SET A VALUE
-				$.cookie('gameID',msg.response.gameID);
+				//$.cookie('gameID',msg.response.gameID);
 				
 				//GET A VALUE
-				var gameID = $.cookie('gameID');
+				//var gameID = $.cookie('gameID');
             }
 		});
 	});
