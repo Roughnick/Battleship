@@ -1,12 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <header>
+	<header>
 		<script type="text/javascript" src="Board.js"></script>
 	</header>
 	<body>
-		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<img id="drag1" src="Chrysanthemum.jpg" draggable="true" ondragstart="drag(event)" width="50" height="50"/>
 		</br>
 		<table id="OpponentBoard" border="1px">
 			<tr bgcolor="lightblue">
@@ -157,6 +155,12 @@
 		<ol dropzone="move f:image/jpg" ondrop="allowDrop(event)"></ol>
 		</br>
 		</br>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<img id="Carrier" src="Carrier.jpg" draggable="true" ondragstart="drag(event)"/>
+		<img id="Assault" src="Assault.jpg" draggable="true" ondragstart="drag(event)"/>
+		<img id="Cruiser" src="Cruiser.jpg" draggable="true" ondragstart="drag(event)"/>
+		<img id="Submarine" src="Sub.jpg" draggable="true" ondragstart="drag(event)"/>		
+		<img id="Patroller" src="Patrolboat.jpg" draggable="true" ondragstart="drag(event)"/>
 		<table id="GameBoard" border="1px">
 			<tr bgcolor="lightblue">
 				<th></th>
