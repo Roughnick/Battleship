@@ -3,15 +3,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<title>Single User Page</title>
-		<script type="text/javascript" src="">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="cookie.js"></script>
+		<script  src="Battleship.js"></script>
+		<script type="text/javascript">
 			function formSubmit(){
 				var formResult = document.getElementById("singlePlayerForm").submit();
 			}
+			
+			$(document).ready(function(){
+				$('#welcomeUser').append(callUsername());
+			});
 		</script>
 	</head>
 	<body>
 		<div id="singlePlayerWelcome">
-			<h1>Welcome to Single Player v. <br/>Artificial Intelligence Battleship (AIB)</h1>
+			<h1>Welcome to Single Player v. Artificial Intelligence Battleship (AIB)</h1>
+			<h3 id= "welcomeUser">Welcome </h3>
 			<!--<br/>-->
 		</div>
 		<div id="SinglePlayerDificulty" action="form_action.asp">

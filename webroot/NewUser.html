@@ -3,18 +3,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<title>New User Page</title>
-		<script type="text/javascript" src="">
-			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="cookie.js"></script>
+		<script type="text/javascript" src="Battleship.js"></script>
+		<script>
+			<!--this will redirect the user to the single player page-->
+			function singleRedirect()
+			{
+				usernameSave($('#username').val());
+				window.location.assign('single.html');
+			}
+			<!--this will redirect the user to the multiplayer page-->
+			function multiRedirect()
+			{
+				usernameSave($('#username').val());
+				window.location.assign('multiplyer.html');
+			}
 		</script>
 	</head>
 	<body>
 		</div>
 		<div id="NewUser" action="form_action.asp">
-			<h2>Username:  </h2><input type="text" name="Username"><br/>
+			<h2>Username:  </h2><input type="text" id="username" name="Username" value="New Player"><br/>
 			<h1>Select a Game Play</h1><br/>
-			Single Player: <input type="checkbox" name="GamePlayType" value="Single Player"/>
+			<input type="Button" id="single" onclick="singleRedirect()" name="GamePlayType" value="Single Player">
+			<input type="Button" id="multi" onclick="multiRedirect()" name="GamePlayType" value="Multiplayer">
+			<!--Single Player: <input type="checkbox" name="GamePlayType" value="Single Player"/>
 			Multiplayer:  <input type="checkbox" name="GamePlayType" value="Multiplayer"/>
-			<input type="button" onclick="formSubmit" value="Submit"/>
+			<input type="button" onclick="formSubmit" value="Submit"/>-->
 		</div>
 	</body>
 </html>
