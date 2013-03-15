@@ -1,6 +1,7 @@
 // URL to send request to.
 var url = "http://dickerson.neumont.edu:8080/Battleship/GameRequest/";
 var username="Player";
+var gameListLength = "3";
 
 function usernameSave(name)
 {
@@ -24,9 +25,17 @@ $(document).ready(function(){
 	//this will go off when the single player button is pressed
 	$('#single').click(function(){
 	})
+	//this will go off when the second button in BattleshipGame.html is clicked
 	$('#test2').click(function() {
 		$('#games').append('<tr><td>12233454</td><td>Barry</td><td>waiting</td></tr>');
 	});
+	//this will go off when the second button in BattleshipGame.html is clicked
+	$('#refresh').click(function() {
+		for(var i=0;i<gameListLength;i++){
+		$('#GameList').append('<tr><td>12233454</td><td>Barry</td><td>WaitingFor2nd</td></tr>');
+		}
+	});
+	
 	//This will go off when the button in BattleshipGame.HTML is clicked
 	$('#test').click(function(){
 		$.ajax({

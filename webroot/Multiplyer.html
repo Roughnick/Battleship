@@ -14,22 +14,12 @@
 		<div id="">
 			New Game:  <input type="button" onclick="alert('You selected a new game')" value="New Game"/><br/>
 			Join Game:  <input type="button" onclick="alert('You selected to join a game')" value="Join a Game"/><br/>
-			<input type="button" onclick="alert('This should refresh the list of current games.')" value="Refresh"/>
-			<table border="1">
+			<input type="button" id="refresh" value="Refresh"/>
+			<table id= "GameList" border="1">
 				<tr>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>a</td>
-					<td>b</td>
-					<td>c</td>
-				</tr>
-				<tr>
-					<td>ä</td>
-					<td>ö</td>
-					<td>ü</td>
+					<th>GameID</th>
+					<th>PlayerName</th>
+					<th>Status</th>
 				</tr>
 			</table>
 		</div>
