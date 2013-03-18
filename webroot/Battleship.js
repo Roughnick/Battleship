@@ -8,6 +8,7 @@ var gameIdArray = new Array();
 var playerNameArray = new Array();
 var statusArray = new Array();
 
+
 function usernameSave(name)
 {
 	username = name;
@@ -19,6 +20,35 @@ function callUsername()
 	username = localStorage['username'];
 	return username;
 }
+
+function joiningGame(i){
+	var name = "<playerID>"+playerNameArray.slice(i,i+1)+"</playerID><gameID>"+gameIdArray.slice(i,i+1)+"</gameID>"
+	return name;
+}
+
+//
+function joinButton(i){
+	//alert(gameIdArray.slice(i,i+1));
+	$.ajax({
+			type : "POST",
+			beforeSend: function (request)
+            {
+                request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+            },
+            url: url+"Join",
+			dataType: "XML",
+            data: sendGameRequest('<playerID>'+playerNameArray.slice(i,i+1)+'</playerID><gameID>'+gameIdArray.slice(i,i+1)+'</gameID>'),
+            processData: false,
+            success: function(msg) {
+				console.log(msg);
+				$(msg).find('response').each(function(){
+					console.log(msg);
+				});
+            }
+	});
+}
+
+//
 $(document).ready(function(){
 	
 	function sendGameRequest(data)
@@ -30,10 +60,7 @@ $(document).ready(function(){
 	//this will go off when the single player button is pressed
 	$('#single').click(function(){
 	})
-	//this will go off when the second button in BattleshipGame.html is clicked
-	$('#test2').click(function() {
-		$('#games').append('<tr><td>12233454</td><td>Barry</td><td>waiting</td></tr>');
-	});
+	
 	//This will refresh the page to its original state
 	$('#refresh').click(function() {
 		location.reload();
@@ -64,6 +91,9 @@ $(document).ready(function(){
 		});
 	});
 	
+	//This will be for joining a game
+	$('.join').click(joinButton);
+	
 	//this will create the game list and show the games availiable
 	$('#create').click(function(){
 		$.ajax({
@@ -85,11 +115,13 @@ $(document).ready(function(){
 					numOfGames++;
 				});
 				for(var i=0;i<numOfGames;i++){
-					$('#GameList').append('<tr><td>'+gameIdArray[i]+'</td><td>'+playerNameArray[i]+'</td><td>'+statusArray[i]+'</td></tr>');
+					$('#GameList').append('<tr><td>'+gameIdArray[i]+'</td><td>'+playerNameArray[i]+'</td><td>'+statusArray[i]+'</td><td><input type="button" id"'+i+'" onclick="joinButton('+i+')" value="Join Game"/></td></tr>');
 				}
             }
 		});
 	});
+	
+	
 	
 	//This will sent the player name and robot difficulty
 	$('EdisonLevel').click(function(){
