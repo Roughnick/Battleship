@@ -8,13 +8,13 @@ var gameIdArray = new Array();
 var playerNameArray = new Array();
 var statusArray = new Array();
 
-
+//this will save the username to local storage
 function usernameSave(name)
 {
 	username = name;
-	localStorage.setItem('userName',username);
+	localStorage.setItem('username',username);
 }
-	
+//this will call up the username that is saved in local storage	
 function callUsername()
 {
 	username = localStorage['username'];
