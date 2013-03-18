@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<header>
+		<script type="text/javascript" src="Board.js"></script>
+	</header>
+	<body>
+		</br>
+		<table id="OpponentBoard" border="1px" width="700px" background-color=transparent>
+			<tr bgcolor="lightblue">
+				<th></th>
+				<th>A</th>
+				<th>B</th>
+				<th>C</th>
+				<th>D</th>
+				<th>E</th>
+				<th>F</th>
+				<th>G</th>
+				<th>H</th>
+				<th>I</th>
+				<th>J</th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">1</th>	
+				<th><input type="button" onclick="onoff(this)" value="A1"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B1"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C1"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D1"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E1"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F1"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G1"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H1"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I1"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J1"/></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">2</th>
+				<th><input type="button" onclick="onoff(this)" value="A2"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B2"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C2"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D2"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E2"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F2"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G2"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H2"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I2"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J2"/></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">3</th>
+				<th><input type="button" onclick="onoff(this)" value="A3"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B3"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C3"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D3"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E3"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F3"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G3"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H3"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I3"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J3"/></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">4</th>
+				<th><input type="button" onclick="onoff(this)" value="A4"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B4"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C4"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D4"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E4"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F4"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G4"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H4"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I4"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J4"/></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">5</th>
+				<th><input type="button" onclick="onoff(this)" value="A5"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B5"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C5"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D5"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E5"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F5"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G5"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H5"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I5"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J5"/></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">6</th>
+				<th><input type="button" onclick="onoff(this)" value="A6"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B6"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C6"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D6"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E6"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F6"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G6"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H6"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I6"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J6"/></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">7</th>
+				<th><input type="button" onclick="onoff(this)" value="A7"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B7"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C7"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D7"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E7"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F7"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G7"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H7"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I7"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J7"/></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">8</th>
+				<th><input type="button" onclick="onoff(this)" value="A8"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B8"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C8"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D8"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E8"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F8"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G8"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H8"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I8"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J8"/></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">9</th>
+				<th><input type="button" onclick="onoff(this)" value="A9"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B9"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C9"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D9"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E9"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F9"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G9"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H9"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I9"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J9"/></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">10</th>
+				<th><input type="button" onclick="onoff(this)" value="A10"/></th>
+				<th><input type="button" onclick="onoff(this)" value="B10"/></th>
+				<th><input type="button" onclick="onoff(this)" value="C10"/></th>
+				<th><input type="button" onclick="onoff(this)" value="D10"/></th>
+				<th><input type="button" onclick="onoff(this)" value="E10"/></th>
+				<th><input type="button" onclick="onoff(this)" value="F10"/></th>
+				<th><input type="button" onclick="onoff(this)" value="G10"/></th>
+				<th><input type="button" onclick="onoff(this)" value="H10"/></th>
+				<th><input type="button" onclick="onoff(this)" value="I10"/></th>
+				<th><input type="button" onclick="onoff(this)" value="J10"/></th>
+			</tr>
+		</table>
+		<p id="OpponentName">Opponent</p>
+		<ol dropzone="move f:image/jpg" ondrop="allowDrop(event)"></ol>
+		</br>
+		</br>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<img id="Carrier" src="Carrier.jpg" draggable="true" ondragstart="drag(event)"/>
+		<img id="Assault" src="Assault.jpg" draggable="true" ondragstart="drag(event)"/>
+		<img id="Cruiser" src="Cruiser.jpg" draggable="true" ondragstart="drag(event)"/>
+		<img id="Submarine" src="Sub.jpg" draggable="true" ondragstart="drag(event)"/>		
+		<img id="Patroller" src="Patrolboat.jpg" draggable="true" ondragstart="drag(event)"/>
+		<table id="GameBoard" border="1px">
+			<tr bgcolor="lightblue">
+				<th></th>
+				<th>A</th>
+				<th>B</th>
+				<th>C</th>
+				<th>D</th>
+				<th>E</th>
+				<th>F</th>
+				<th>G</th>
+				<th>H</th>
+				<th>I</th>
+				<th>J</th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">1</th>	
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">2</th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">3</th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">4</th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">5</th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">6</th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">7</th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">8</th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">9</th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+			<tr>
+				<th bgcolor="lightblue">10</th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+			</tr>
+		</table>
+	</body>
+	
+</html>

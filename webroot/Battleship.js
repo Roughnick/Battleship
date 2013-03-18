@@ -47,7 +47,6 @@ function joinButton(i){
             success: function(msg) {
 				console.log(msg);
 				$(msg).find('response').each(function(){
-					console.log(msg);
 				});
             }
 	});
