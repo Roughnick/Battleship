@@ -21,6 +21,11 @@ function callUsername()
 	return username;
 }
 
+function sendGameRequest(data){
+	var request = "<request>" + data + "</request>";	
+	return request;
+}
+
 function joiningGame(i){
 	var name = "<playerID>"+playerNameArray.slice(i,i+1)+"</playerID><gameID>"+gameIdArray.slice(i,i+1)+"</gameID>"
 	return name;
@@ -51,12 +56,6 @@ function joinButton(i){
 //
 $(document).ready(function(){
 	
-	function sendGameRequest(data)
-	{
-		var request = "<request>" + data + "</request>";
-		
-		return request;
-	}
 	//this will go off when the single player button is pressed
 	$('#single').click(function(){
 	})
