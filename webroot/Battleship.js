@@ -1,9 +1,12 @@
 // URL to send request to.
 var url = "http://dickerson.neumont.edu:8080/Battleship/GameRequest/";
+
 var username="Player";
-var gameListLength = "3";
+var numOfGames="0";
 var gameId = "01010";
-var 
+var gameIdArray = new Array();
+var playerNameArray = new Array();
+var statusArray = new Array();
 
 function usernameSave(name)
 {
@@ -31,11 +34,9 @@ $(document).ready(function(){
 	$('#test2').click(function() {
 		$('#games').append('<tr><td>12233454</td><td>Barry</td><td>waiting</td></tr>');
 	});
-	//this will go off when the second button in BattleshipGame.html is clicked
+	//This will refresh the page to its original state
 	$('#refresh').click(function() {
-		for(var i=0;i<gameListLength;i++){
-		$('#GameList').append('<tr><td>12233454</td><td>Barry</td><td>WaitingFor2nd</td></tr>');
-		}
+		location.reload();
 	});
 	
 	//this will sent in the player name then request a game list 
@@ -61,26 +62,31 @@ $(document).ready(function(){
 				
             }
 		});
-		
+	});
+	
+	//this will create the game list and show the games availiable
+	$('#create').click(function(){
 		$.ajax({
 			type : "POST",
 			beforeSend: function (request)
             {
                 request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
             },
-            url: url+"NewGame",
+            url: url+"GameList",
 			dataType: "XML",
             data: sendGameRequest(),
             processData: false,
             success: function(msg) {
-				window.location.assign('multiplyer.html');
 				console.log(msg);
-				$(msg).find('response').each(function(){
-					var gameID = $(this).find('gameID').text();
-					localStorage.setItem['gameid', gameID];
-					//var gameID = $(this).find('gameID').text();
-					//localStorage.setItem['gameid', gameID];
+				$(msg).find('game').each(function(){
+					gameIdArray.push($(this).find('gameID').text());
+					playerNameArray.push($(this).find('turn').text());
+					statusArray.push($(this).find('state').text());
+					numOfGames++;
 				});
+				for(var i=0;i<numOfGames;i++){
+					$('#GameList').append('<tr><td>'+gameIdArray[i]+'</td><td>'+playerNameArray[i]+'</td><td>'+statusArray[i]+'</td></tr>');
+				}
             }
 		});
 	});
