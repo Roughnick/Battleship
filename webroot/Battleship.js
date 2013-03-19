@@ -3,10 +3,22 @@ var url = "http://dickerson.neumont.edu:8080/Battleship/GameRequest/";
 
 var username="Player";
 var numOfGames="0";
+var shipCount = 0;
 var gameId = "01010";
 var gameIdArray = new Array();
 var playerNameArray = new Array();
 var statusArray = new Array();
+var letterCord = new Array();
+letterCord[0]="A";
+letterCord[1]="B";
+letterCord[2]="C";
+letterCord[3]="D";
+letterCord[4]="E";
+letterCord[5]="F";
+letterCord[6]="G";
+letterCord[7]="H";
+letterCord[8]="I";
+letterCord[9]="J";
 
 //this will save the username to local storage
 function usernameSave(name)
@@ -21,10 +33,19 @@ function callUsername()
 	return username;
 }
 
+function placeShips(cord, dir, space){
+	var cordString = cord.toString();
+	var dirString = dir.toString();
+	for(var i=0;i<space;i++){
+		document.getElementsByTagName("INPUT").setAttribute("color","red");
+	}
+}
+
 function sendGameRequest(data){
 	var request = "<request>" + data + "</request>";	
 	return request;
 }
+
 
 function joiningGame(i){
 	var name = "<playerID>"+playerNameArray.slice(i,i+1)+"</playerID><gameID>"+gameIdArray.slice(i,i+1)+"</gameID>"
@@ -46,9 +67,12 @@ function joinButton(i){
             processData: false,
             success: function(msg) {
 				console.log(msg);
+				window.location.assign('BattleshipGame.html');
 				$(msg).find('response').each(function(){
 				});
+				
             }
+			
 	});
 }
 
@@ -62,6 +86,67 @@ $(document).ready(function(){
 	//This will refresh the page to its original state
 	$('#refresh').click(function() {
 		location.reload();
+	});
+	
+	$('#submitCord').click(function(){
+	
+		if(shipCount==0){
+			var cord = $('#shipPlacmentCord').val();
+			var dir = $('#direction').val();
+			var space = 5;
+			placeShips(cord, dir, space);
+			shipCount++;
+			
+		}else
+		if(shipCount==1){
+			var cord = $('#shipPlacmentCord').val();
+			var dir = $('#direction').val();
+			var space = 4;
+			placeShips(cord, dir, space);
+			shipCount++;
+			
+		}else
+		if(shipCount==2){
+			var cord = $('#shipPlacmentCord').val();
+			var dir = $('#direction').val();
+			var space = 3;
+			placeShips(cord, dir, space);
+			shipCount++;
+			
+		}else
+		if(shipCount==3){
+			var cord = $('#shipPlacmentCord').val();
+			var dir = $('#direction').val();
+			var space = 3;
+			placeShips(cord, dir, space);
+			shipCount++;
+			
+		}else
+		if(shipCount==4){
+			var cord = $('#shipPlacmentCord').val();
+			var dir = $('#direction').val();
+			var space = 2;
+			placeShips(cord, dir, space);
+			shipCount=0;
+		}
+	});
+	
+	$('#Forfeit').click(function() {
+		alert("Thank you for Forfeiting");
+		$.ajax({
+			type : "POST",
+			beforeSend: function (request)
+            {
+                request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+            },
+            url: url+"Forfeit",
+			dataType: "XML",
+            data: sendGameRequest(),
+            processData: false,
+            success: function(msg) {
+				console.log(msg);			
+            }
+		});
 	});
 	
 	//this will sent in the player name then request a game list 

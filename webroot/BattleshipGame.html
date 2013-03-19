@@ -6,10 +6,15 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="cookie.js"></script>
 		<script type="text/javascript" src="Battleship.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#PlayerName').append(callUsername());
+			});
+		</script>
 	</head>
 	<body>
 		<br/>
-		<table id="OpponentBoard" align="center" border="1px" width="400px" height="400px" background='Carrier.jpg') bgrepeat=>
+		<table float="left" id="OpponentBoard" align="center" border="1px" width="300px" height="300px") >
 			<tr bgcolor="lightblue">
 				<th></th>
 				<th>A</th>
@@ -25,146 +30,155 @@
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">1</th>	
-				<td id="A1"></td>
-				<td id="B1"></td>
-				<td id="C1"></td>
-				<td id="D1"></td>
-				<td id="E1"></td>
-				<td id="F1"></td>
-				<td id="G1"></td>
-				<td id="H1"></td>
-				<td id="I1"></td>
-				<td id="J1"></td>
+				<td id="OA1"></td>
+				<td id="OB1"></td>
+				<td id="OC1"></td>
+				<td id="OD1"></td>
+				<td id="OE1"></td>
+				<td id="OF1"></td>
+				<td id="OG1"></td>
+				<td id="OH1"></td>
+				<td id="OI1"></td>
+				<td id="OJ1"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">2</th>
-				<td id="A2"></td>
-				<td id="B2"></td>
-				<td id="C2"></td>
-				<td id="D2"></td>
-				<td id="E2"></td>
-				<td id="F2"></td>
-				<td id="G2"></td>
-				<td id="H2"></td>
-				<td id="I2"></td>
-				<td id="J2"></td>
+				<td id="OA2"></td>
+				<td id="OB2"></td>
+				<td id="OC2"></td>
+				<td id="OD2"></td>
+				<td id="OE2"></td>
+				<td id="OF2"></td>
+				<td id="OG2"></td>
+				<td id="OH2"></td>
+				<td id="OI2"></td>
+				<td id="OJ2"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">3</th>
-				<td id="A3"></td>
-				<td id="B3"></td>
-				<td id="C3"></td>
-				<td id="D3"></td>
-				<td id="E3"></td>
-				<td id="F3"></td>
-				<td id="G3"></td>
-				<td id="H3"></td>
-				<td id="I3"></td>
-				<td id="J3"></td>
+				<td id="OA3"></td>
+				<td id="OB3"></td>
+				<td id="OC3"></td>
+				<td id="OD3"></td>
+				<td id="OE3"></td>
+				<td id="OF3"></td>
+				<td id="OG3"></td>
+				<td id="OH3"></td>
+				<td id="OI3"></td>
+				<td id="OJ3"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">4</th>
-				<td id="A4"></td>
-				<td id="B4"></td>
-				<td id="C4"></td>
-				<td id="D4"></td>
-				<td id="E4"></td>
-				<td id="F4"></td>
-				<td id="G4"></td>
-				<td id="H4"></td>
-				<td id="I4"></td>
-				<td id="J4"></td>
+				<td id="OA4"></td>
+				<td id="OB4"></td>
+				<td id="OC4"></td>
+				<td id="OD4"></td>
+				<td id="OE4"></td>
+				<td id="OF4"></td>
+				<td id="OG4"></td>
+				<td id="OH4"></td>
+				<td id="OI4"></td>
+				<td id="OJ4"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">5</th>
-				<td id="A5"></td>
-				<td id="B5"></td>
-				<td id="C5"></td>
-				<td id="D5"></td>
-				<td id="E5"></td>
-				<td id="F5"></td>
-				<td id="G5"></td>
-				<td id="H5"></td>
-				<td id="I5"></td>
-				<td id="J5"></td>
+				<td id="OA5"></td>
+				<td id="OB5"></td>
+				<td id="OC5"></td>
+				<td id="OD5"></td>
+				<td id="OE5"></td>
+				<td id="OF5"></td>
+				<td id="OG5"></td>
+				<td id="OH5"></td>
+				<td id="OI5"></td>
+				<td id="OJ5"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">6</th>
-				<td id="A6"></td>
-				<td id="B6"></td>
-				<td id="C6"></td>
-				<td id="D6"></td>
-				<td id="E6"></td>
-				<td id="F6"></td>
-				<td id="G6"></td>
-				<td id="H6"></td>
-				<td id="I6"></td>
-				<td id="J6"></td>
+				<td id="OA6"></td>
+				<td id="OB6"></td>
+				<td id="OC6"></td>
+				<td id="OD6"></td>
+				<td id="OE6"></td>
+				<td id="OF6"></td>
+				<td id="OG6"></td>
+				<td id="OH6"></td>
+				<td id="OI6"></td>
+				<td id="OJ6"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">7</th>
-				<td id="A7"></td>
-				<td id="B7"></td>
-				<td id="C7"></td>
-				<td id="D7"></td>
-				<td id="E7"></td>
-				<td id="F7"></td>
-				<td id="G7"></td>
-				<td id="H7"></td>
-				<td id="I7"></td>
-				<td id="J7"></td>
+				<td id="OA7"></td>
+				<td id="OB7"></td>
+				<td id="OC7"></td>
+				<td id="OD7"></td>
+				<td id="OE7"></td>
+				<td id="OF7"></td>
+				<td id="OG7"></td>
+				<td id="OH7"></td>
+				<td id="OI7"></td>
+				<td id="OJ7"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">8</th>
-				<td id="A8"></td>
-				<td id="B8"></td>
-				<td id="C8"></td>
-				<td id="D8"></td>
-				<td id="E8"></td>
-				<td id="F8"></td>
-				<td id="G8"></td>
-				<td id="H8"></td>
-				<td id="I8"></td>
-				<td id="J8"></td>
+				<td id="OA8"></td>
+				<td id="OB8"></td>
+				<td id="OC8"></td>
+				<td id="OD8"></td>
+				<td id="OE8"></td>
+				<td id="OF8"></td>
+				<td id="OG8"></td>
+				<td id="OH8"></td>
+				<td id="OI8"></td>
+				<td id="OJ8"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">9</th>
-				<td id="A9"></td>
-				<td id="B9"></td>
-				<td id="C9"></td>
-				<td id="D9"></td>
-				<td id="E9"></td>
-				<td id="F9"></td>
-				<td id="G9"></td>
-				<td id="H9"></td>
-				<td id="I9"></td>
-				<td id="J9"></td>
+				<td id="OA9"></td>
+				<td id="OB9"></td>
+				<td id="OC9"></td>
+				<td id="OD9"></td>
+				<td id="OE9"></td>
+				<td id="OF9"></td>
+				<td id="OG9"></td>
+				<td id="OH9"></td>
+				<td id="OI9"></td>
+				<td id="OJ9"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">10</th>
-				<td id="A10"></td>
-				<td id="B10"></td>
-				<td id="C10"></td>
-				<td id="D10"></td>
-				<td id="E10"></td>
-				<td id="F10"></td>
-				<td id="G10"></td>
-				<td id="H10"></td>
-				<td id="I10"></td>
-				<td id="J10"></td>
+				<td id="OA10"></td>
+				<td id="OB10"></td>
+				<td id="OC10"></td>
+				<td id="OD10"></td>
+				<td id="OE10"></td>
+				<td id="OF10"></td>
+				<td id="OG10"></td>
+				<td id="OH10"></td>
+				<td id="OI10"></td>
+				<td id="OJ10"></td>
 			</tr>
 		</table>
-		<p id="OpponentName">Opponent</p>
-		<ol dropzone="move f:image/jpg" ondrop="allowDrop(event)"></ol>
+		<h2 id="OpponentName" align="center">Opponent</h2>
 		</br>
 		</br>
-		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<img id="Carrier" src="Carrier.jpg" draggable="true" ondragstart="drag(event)"/>
-		<img id="Assault" src="Assault.jpg" draggable="true" ondragstart="drag(event)"/>
-		<img id="Cruiser" src="Cruiser.jpg" draggable="true" ondragstart="drag(event)"/>
-		<img id="Submarine" src="Sub.jpg" draggable="true" ondragstart="drag(event)"/>		
-		<img id="Patroller" src="Patrolboat.jpg" draggable="true" ondragstart="drag(event)"/>
-		<table id="GameBoard" border="1px">
+		<h2 id="PlayerName" align="center">Player: </h2>
+		<input type="button" id="Forfeit" value="Forfeit">
+		<div>
+		<h3>Ship Placement</h3>
+			<form id="shipPlacement">
+				<p id="ShipName">Place: Carrier</p>
+				Direction: <select id="direction">
+					<option value="Down">Down</option>
+					<option value="Up">Up</option>
+					<option value="Left">Left</option>
+					<option value="Right">Right</option>
+				</select>
+				Location:<input type="text"id="shipPlacmentCord"></input>
+				<input id="submitCord" type="button" onclick="alert('Not Functional Yet')" value="Submit"></submit>
+			</form>
+		</div>
+		<table id="GameBoard" border="1px" align="center" width="300px" height="300px">
 			<tr bgcolor="lightblue">
 				<th></th>
 				<th>A</th>
@@ -180,133 +194,133 @@
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">1</th>	
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA1"></td>
+				<td id="PB1"></td>
+				<td id="PC1"></td>
+				<td id="PD1"></td>
+				<td id="PE1"></td>
+				<td id="PF1"></td>
+				<td id="PG1"></td>
+				<td id="PH1"></td>
+				<td id="PI1"></td>
+				<td id="PJ1"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">2</th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA2"></td>
+				<td id="PB2"></td>
+				<td id="PC2"></td>
+				<td id="PD2"></td>
+				<td id="PE2"></td>
+				<td id="PF2"></td>
+				<td id="PG2"></td>
+				<td id="PH2"></td>
+				<td id="PI2"></td>
+				<td id="PJ2"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">3</th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA3"></td>
+				<td id="PB3"></td>
+				<td id="PC3"></td>
+				<td id="PD3"></td>
+				<td id="PE3"></td>
+				<td id="PF3"></td>
+				<td id="PG3"></td>
+				<td id="PH3"></td>
+				<td id="PI3"></td>
+				<td id="PJ3"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">4</th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA4"></td>
+				<td id="PB4"></td>
+				<td id="PC4"></td>
+				<td id="PD4"></td>
+				<td id="PE4"></td>
+				<td id="PF4"></td>
+				<td id="PG4"></td>
+				<td id="PH4"></td>
+				<td id="PI4"></td>
+				<td id="PJ4"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">5</th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA5"></td>
+				<td id="PB5"></td>
+				<td id="PC5"></td>
+				<td id="PD5"></td>
+				<td id="PE5"></td>
+				<td id="PF5"></td>
+				<td id="PG5"></td>
+				<td id="PH5"></td>
+				<td id="PI5"></td>
+				<td id="PJ5"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">6</th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA6"></td>
+				<td id="PB6"></td>
+				<td id="PC6"></td>
+				<td id="PD6"></td>
+				<td id="PE6"></td>
+				<td id="PF6"></td>
+				<td id="PG6"></td>
+				<td id="PH6"></td>
+				<td id="PI6"></td>
+				<td id="PJ6"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">7</th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA7"></td>
+				<td id="PB7"></td>
+				<td id="PC7"></td>
+				<td id="PD7"></td>
+				<td id="PE7"></td>
+				<td id="PF7"></td>
+				<td id="PG7"></td>
+				<td id="PH7"></td>
+				<td id="PI7"></td>
+				<td id="PJ7"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">8</th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA8"></td>
+				<td id="PB8"></td>
+				<td id="PC8"></td>
+				<td id="PD8"></td>
+				<td id="PE8"></td>
+				<td id="PF8"></td>
+				<td id="PG8"></td>
+				<td id="PH8"></td>
+				<td id="PI8"></td>
+				<td id="PJ8"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">9</th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA9"></td>
+				<td id="PB9"></td>
+				<td id="PC9"></td>
+				<td id="PD9"></td>
+				<td id="PE9"></td>
+				<td id="PF9"></td>
+				<td id="PG9"></td>
+				<td id="PH9"></td>
+				<td id="PI9"></td>
+				<td id="PJ9"></td>
 			</tr>
 			<tr>
 				<th bgcolor="lightblue">10</th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
-				<th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+				<td id="PA10"></td>
+				<td id="PB10"></td>
+				<td id="PC10"></td>
+				<td id="PD10"></td>
+				<td id="PE10"></td>
+				<td id="PF10"></td>
+				<td id="PG10"></td>
+				<td id="PH10"></td>
+				<td id="PI10"></td>
+				<td id="PJ10"></td>
 			</tr>
 		</table>
 	</body>
